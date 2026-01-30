@@ -1,0 +1,29 @@
+# Build outputs
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+*.suo
+*.user
+
+# Java
+*.class
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# C/C++
+*.exe
+*.o
+*.out
+
+# Node.js
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

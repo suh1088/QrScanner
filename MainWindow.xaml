@@ -1,0 +1,62 @@
+<Window x:Class="QRScreenScanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="QR Scanner"
+        Width="420"
+        Height="160"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Resources/Styles.xaml"/>
+    </Window.Resources>
+
+    <Border CornerRadius="12"
+            Background="#E6202020"
+            BorderBrush="#40FFFFFF"
+            BorderThickness="1"
+            Padding="24">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20"
+                              ShadowDepth="5"
+                              Opacity="0.5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Status Icon and Title -->
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,12">
+                <TextBlock x:Name="StatusIcon"
+                           FontSize="28"
+                           Margin="0,0,12,0"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="StatusTitle"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Message -->
+            <TextBlock x:Name="MessageText"
+                       Grid.Row="1"
+                       FontSize="13"
+                       Foreground="#CCFFFFFF"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       MaxWidth="380"/>
+        </Grid>
+    </Border>
+</Window>
